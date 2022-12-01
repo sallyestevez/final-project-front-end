@@ -19,7 +19,13 @@ function Header({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
         <header>
             <nav>
                 {isLoggedIn && <Link to="/">
-                    <p>Home</p>
+                    <p>Dashboard</p>
+                </Link>}
+                {isLoggedIn && <Link to="/profile">
+                    <p>Profile</p>
+                </Link>}
+                {isLoggedIn && <Link to="/new-post">
+                    <p>Create Post</p>
                 </Link>}
                 {!isLoggedIn && <Link to="/login">
                     <p>Login</p>

@@ -8,18 +8,20 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 // styling & Components
 import './App.css';
+import CreatePost from "./pages/CreatePost";
 import CreateUserPage from "./pages/CreateUser";
+import Dashboard from "./pages/Dashboard";
 import LoginPage from "./pages/Login";
 import UserProfilePage from "./pages/UserProfile";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDr1IopijrEwo6pV_kthcG6ZmOxngwPpis",
-  authDomain: "exercise-six-fall-2022-18788.firebaseapp.com",
-  projectId: "exercise-six-fall-2022-18788",
-  storageBucket: "exercise-six-fall-2022-18788.appspot.com",
-  messagingSenderId: "530220437413",
-  appId: "1:530220437413:web:ea3ddd86e918b1801ce24c"
+  apiKey: "AIzaSyDOkKdMUmJ9BLEJrUdeR0r7YDFrUpLwJQk",
+  authDomain: "final-project-fall-2022.firebaseapp.com",
+  projectId: "final-project-fall-2022",
+  storageBucket: "final-project-fall-2022.appspot.com",
+  messagingSenderId: "689525929500",
+  appId: "1:689525929500:web:5e5b5772937e0c0598d1d9"
 };
 
 function App() {
@@ -62,14 +64,36 @@ function App() {
 
   // goes to page based on the file path
   const router = createBrowserRouter([
+    // dashboard / home page
     {
-      // home page
       path: "/",
+      element: (
+        <Dashboard
+          isLoggedIn={isLoggedIn}
+          setIsLoggedIn={setIsLoggedIn}
+          setUserInformation={setUserInformation}
+        />
+      ),
+    },
+    {
+      // user profile page
+      path: "/profile",
       element: (
         <UserProfilePage 
           isLoading={isLoading} 
           isLoggedIn={isLoggedIn} 
           userInformation={userInformation} 
+          setIsLoggedIn={setIsLoggedIn}
+          setUserInformation={setUserInformation}
+        />
+      ),
+    },
+    {
+      // create post page
+      path: "/new-post",
+      element: (
+        <CreatePost 
+          isLoggedIn={isLoggedIn}
           setIsLoggedIn={setIsLoggedIn}
           setUserInformation={setUserInformation}
         />
@@ -96,7 +120,7 @@ function App() {
           setUserInformation={setUserInformation}
         />
       ),
-    },
+    },    
   ]);
   
   return (
