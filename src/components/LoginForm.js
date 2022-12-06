@@ -3,7 +3,7 @@ import React from "react";
 function LoginForm({ loginUser }) {
     return (
         <form className="formElement" onSubmit={(e) => loginUser(e)}>
-            <label htmlFor="email">User Name</label>
+            <label htmlFor="email">Email</label>
             <input type="text" name="email" />
 
             <label htmlFor="password">Password</label>

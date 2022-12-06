@@ -52,6 +52,7 @@ function LoginPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
             <h1>Welcome back!</h1>
             <LoginForm loginUser={loginUser}/>
             {errors}
+            <p>Don't have an account? Create account</p>
         </div>
     </>
     );

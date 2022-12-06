@@ -18,7 +18,7 @@ nav p {
   font-size: 16px;
   font-weight: bold;
   margin: 0 0 0 20px;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 nav a {
@@ -53,4 +53,11 @@ nav a {
   font-size: 16px;
   margin-top: 20px;
   padding: 10px;
+}
+
+.PostWrapper {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: 50px;
 }

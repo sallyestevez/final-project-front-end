@@ -3,6 +3,10 @@ import React from "react";
 function CreateUserForm({ signUpUser }) {
     return (
         <form className="FormElement" onSubmit={(e) => signUpUser(e)}>
+
+            <label htmlFor="username">Display Name</label>
+            <input type="text" name="text" />
+
             <label htmlFor="email">Email</label>
             <input type="email" name="email" />
 

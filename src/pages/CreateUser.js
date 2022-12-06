@@ -60,6 +60,7 @@ function CreateUserPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
                 <h1>Welcome!</h1>
                 <CreateUserForm signUpUser={signUpUser}/>
                 <p>{errors}</p>
+                <p>Already have an account? Log in</p>
             </div>
         </>
     );
