@@ -17,11 +17,14 @@ function CreateUserPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
         // generic argument placeholder (element)
         (e) => {
             e.preventDefault();
-
+            if(!e.currentTarget) return;
             // e.currentTarget -referencing form that exists at the time
+            // assign email and password to variables from form
             const email = e.currentTarget.email.value;
             const password = e.currentTarget.password.value;
             const displayName = e.currentTarget.displayName.value;
+
+            console.log({displayName})
 
             const auth = getAuth();
 
@@ -31,16 +34,17 @@ function CreateUserPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
                     const user = userCredential.user;
                     // since the user is true, set logged in
                     setIsLoggedIn(true);
+                    
                     // clear any errors
                     setErrors();
-                
-                // code to add display name to info
-                // chain information
-                updateProfile(user, { displayName: displayName })
+                    // code to add display name to info
+                    // chain information
+                    updateProfile(user, { displayName: displayName })
                     .then(() => {
+                       // provide information about user via setState 
                         setUserInformation({
                             email: user.email,
-                            displayName: user.displayName,
+                            displayName: displayName,
                             uid: user.uid,
                             accessToken: user.accessToken,
                         });
@@ -48,19 +52,19 @@ function CreateUserPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
                     .catch((err) => {
                         const errorCode = err.code;
                         const errorMessage = err.message;
-                        console.warn({err, errorCode, errorMessage });
+                        console.warn({ err, errorCode, errorMessage });
                         setErrors(errorMessage);
-                    })
-                
+                    });
+                })
                 .catch((error) => {
                     const errorCode = error.code;
                     const errorMessage = error.message;
-                    console.warn({error, errorCode, errorMessage });
+                    console.warn({ error, errorCode, errorMessage });
                     setErrors(errorMessage);
                 });
-        }),
-        [getAuth, setErrors, setIsLoggedIn, setUserInformation]
-    });
+        },
+        [ setErrors, setIsLoggedIn, setUserInformation ]
+    );
     
     return (
         <>

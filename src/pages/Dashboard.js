@@ -21,7 +21,10 @@ function Dashboard({ isLoading, isLoggedIn, setIsLoggedIn, setUserInformation, u
             <div className="PageWrapper">
                 <h1>Dashboard</h1>
                 <div className="PostWrapper">
-                    <TextPost />
+                    <TextPost 
+                        userName="Rina Tennoji"
+                        
+                    />
                     <TextPost />
                     <TextPost />
                     <TextPost />

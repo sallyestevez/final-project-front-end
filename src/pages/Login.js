@@ -30,7 +30,7 @@ function LoginPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
                 email: user.email,
                 displayName: user.displayName,
                 uid: user.uid,
-                accessToken: user.accessToken
+                accessToken: user.accessToken,
             });
         })
         .catch((error) => {
