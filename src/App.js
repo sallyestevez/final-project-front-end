@@ -25,7 +25,7 @@ const firebaseConfig = {
 };
 
 function App() {
-  const [appInitialized, setAppInitialized] = useState(false);
+  const [appInitialized, setAppInitialized] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userInformation, setUserInformation] = useState({});
@@ -34,7 +34,7 @@ function App() {
   // ensure app is initialized when ready
   useEffect(() => {
     //Initialize firebase
-    initializeApp(firebaseConfig);
+    const app = initializeApp(firebaseConfig);
     setAppInitialized(true);
   }, []);
 

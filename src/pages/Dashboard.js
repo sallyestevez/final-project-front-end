@@ -1,15 +1,39 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import Header from '../components/Header';
 import { useNavigate } from 'react-router-dom';
 import TextPost from '../components/Post';
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
-function Dashboard({ isLoading, isLoggedIn, setIsLoggedIn, setUserInformation, userInformation }){
+const queryData = async (app) => {
+    if (!app) return [];
+    const db = getFirestore(app);
+    const querySnapshot = await getDocs(collection(db, "posts"));
+    const data = [];
+    querySnapshot.forEach((doc) => {
+        data.push(doc.data());
+    });
+    return data;
+};
+
+function Dashboard({ 
+    app,
+    isLoading, 
+    isLoggedIn, 
+    setIsLoggedIn, 
+    setUserInformation, 
+    userInformation 
+}){
     const navigate = useNavigate();
+    const [postData, setPostData] = useState([]);
 
     // if not logged in & not loading navigate to login page
     useEffect(() => {
         if(!isLoggedIn && !isLoading) navigate("/login");
     }, [isLoading, isLoggedIn, navigate]);
+
+    // useEffect(() => {
+    //     if(!isLoggedIn && !isLoading) navigate("/login");
+    // }, [isLoading, isLoggedIn, navigate]);
 
     return (
         <>
@@ -21,13 +45,13 @@ function Dashboard({ isLoading, isLoggedIn, setIsLoggedIn, setUserInformation, u
             <div className="PageWrapper">
                 <h1>Dashboard</h1>
                 <div className="PostWrapper">
+                    {/* {postData.map((post))} */}
                     <TextPost 
-                        userName="Rina Tennoji"
+                        // content={post.content}
+                        // userId={post.userId}
+                        // userName={post.userName}
                         
                     />
-                    <TextPost />
-                    <TextPost />
-                    <TextPost />
                 </div>  
             </div>
         </>
