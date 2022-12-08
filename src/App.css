@@ -31,14 +31,23 @@ nav a {
   padding: 25px;
 }
 
+.loginMessage  {
+  font-size: 48px;
+  font-weight: bolder;
+  line-height: 48px;
+  margin: 0;
+}
+
 .formElement {
   display: flex;
   flex-direction: column;
   max-width: 500px;
 }
 
+/* can check + change css based on figma */
 .formElement input {
   border: 1px solid black;
+  border-radius: 10px;
   font-size: 20px;
   margin-bottom: 30px;
   padding: 10px;
@@ -49,15 +58,27 @@ nav a {
   margin-bottom: 8px;
 }
 
-.formElement button {
+/* .formElement button {
+  
+} */
+
+.Button {
+  background: azure;
+  border-radius: 10px;
   font-size: 16px;
   margin-top: 20px;
   padding: 10px;
 }
 
-.PostWrapper {
+.PostWrapper{
   display: flex;
-  margin: 0 auto;
-  max-width: 1080px;
-  padding: 50px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.PostCSS {
+  border: 1px solid forestgreen;
+  margin-bottom: 40px;
+  max-width: 350px;
+  width: 100%;
 }

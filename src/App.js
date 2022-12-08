@@ -89,17 +89,6 @@ function App() {
       ),
     },
     {
-      // create post page
-      path: "/new-post",
-      element: (
-        <CreatePost 
-          isLoggedIn={isLoggedIn}
-          setIsLoggedIn={setIsLoggedIn}
-          setUserInformation={setUserInformation}
-        />
-      ),
-    },
-    {
       // login page
       path: "/login",
       element: (
@@ -115,6 +104,17 @@ function App() {
       path: "/create",
       element: (
         <CreateUserPage 
+          isLoggedIn={isLoggedIn}
+          setIsLoggedIn={setIsLoggedIn}
+          setUserInformation={setUserInformation}
+        />
+      ),
+    },
+    {
+      // create post page
+      path: "/new-post",
+      element: (
+        <CreatePost 
           isLoggedIn={isLoggedIn}
           setIsLoggedIn={setIsLoggedIn}
           setUserInformation={setUserInformation}

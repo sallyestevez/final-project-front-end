@@ -9,7 +9,11 @@ function LoginForm({ loginUser }) {
             <label htmlFor="password">Password</label>
             <input type="password" name="password" />
 
-            <button type="submit">Submit</button>
+            <div className="ButtonWrapper">
+                <button type="submit" className="Button">
+                    Submit
+                </button>
+            </div>
         </form>
     );
 }

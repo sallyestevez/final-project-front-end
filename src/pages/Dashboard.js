@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import { useNavigate } from 'react-router-dom';
-import Post from '../components/Post';
+import TextPost from '../components/Post';
 
 function Dashboard({ isLoading, isLoggedIn, setIsLoggedIn, setUserInformation, userInformation }){
     const navigate = useNavigate();
@@ -19,7 +19,13 @@ function Dashboard({ isLoading, isLoggedIn, setIsLoggedIn, setUserInformation, u
                 setUserInformation={setUserInformation}
             />
             <div className="PageWrapper">
-            <Post />
+                <h1>Dashboard</h1>
+                <div className="PostWrapper">
+                    <TextPost />
+                    <TextPost />
+                    <TextPost />
+                    <TextPost />
+                </div>  
             </div>
         </>
     );

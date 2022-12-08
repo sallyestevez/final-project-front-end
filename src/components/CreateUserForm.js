@@ -2,10 +2,10 @@ import React from "react";
 
 function CreateUserForm({ signUpUser }) {
     return (
-        <form className="FormElement" onSubmit={(e) => signUpUser(e)}>
+        <form className="formElement" onSubmit={(e) => signUpUser(e)}>
 
-            <label htmlFor="username">Display Name</label>
-            <input type="text" name="text" />
+            <label htmlFor="username">Name</label>
+            <input type="text" name="displayName" />
 
             <label htmlFor="email">Email</label>
             <input type="email" name="email" />
@@ -13,7 +13,11 @@ function CreateUserForm({ signUpUser }) {
             <label htmlFor="password">Password</label>
             <input type="password" name="password" />
 
-            <button type="submit">Submit</button>
+            <div className="ButtonWrapper">
+                <button type="submit" className="Button">
+                    Submit
+                </button>
+            </div>
         </form>
     );
 }

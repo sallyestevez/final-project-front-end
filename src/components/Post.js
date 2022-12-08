@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Post({ postData }){
+function TextPost({ content, postData, userId, userName }){
     return (
-        <div className='PostWrapper'>
-            <p>Posted by:{" "} 
-                {/* <Link to={`user/${postData.userId}`}>{postData.userId}</Link> */}
+        <div className='PostCSS'>
+            <p>Posted by: {" "}
+                <Link to={`user/${userId}`}>{userName}</Link>
             </p>
-            <p className="PostContent">Text</p>
+            <p className="PostContent">{content}</p>
 
         </div>
-    )
+    );
 }
 
-export default Post;
+export default TextPost;
