@@ -6,7 +6,7 @@ function CreatePostForm({ createPost }) {
             <label htmlFor="feeling">Feeling</label>
             <input type="text" name="feeling" />
             <label htmlFor="postContent">What do you want to say?</label>
-            <input type="text" name="content" />
+            <textarea name="content" rows="4" cols="50"></textarea>
             <div className="ButtonWrapper">
                 <button type="submit" className="Button">
                     Post

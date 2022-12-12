@@ -17,14 +17,18 @@ function Header({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
 
     return (
         <header>
+                <img 
+                    src="https://web.archive.org/web/20171101163714im_/https://d13ph7xrk1ee39.cloudfront.net/img/menu-logo.png?HyDpkTF6yevjYj68w6Gl3g" 
+                    alt="Miiverse" 
+                    width="165" 
+                    height="30"></img>
             <nav>
                 {isLoggedIn && <Link to="/">
-                    <p>Dashboard</p>
+                    <p>Activity Feed</p>
                 </Link>}
                 {isLoggedIn && <Link to="/profile">
                     <p>Profile</p>
                 </Link>}
-                
                 {!isLoggedIn && <Link to="/login">
                     <p>Login</p>
                 </Link>}

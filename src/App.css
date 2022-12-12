@@ -1,4 +1,14 @@
+body {
+  background-color: #F4F4F4;
+  background-image: radial-gradient(#F9F9F9 15%, transparent 10%),
+    radial-gradient(#F9F9F9 15%, transparent 10%);
+  background-size: 10px 10px;
+  background-position: 0 0, 15px 15px;
+  background-repeat: repeat;
+}
+
 header {
+  background-color: white;
   border-bottom: 1px solid black;
   display: flex;
   padding: 10px;
@@ -6,8 +16,12 @@ header {
 
 nav {
   display: flex;
+  font-size: 30px;
+  gap: 50px;
   justify-content: flex-end;
   margin: 0 auto;
+  margin-bottom: 5px;
+  margin-top: 5px;
   max-width: 1080px;
   width: 100%;
 }
@@ -17,7 +31,7 @@ nav p {
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  margin: 0 0 0 20px;
+  margin: 0 0 0 0px;
   text-decoration: none;
 }
 
@@ -77,12 +91,18 @@ nav a {
 }
 
 .PostCSS {
-  border: 1px solid forestgreen;
-  margin-bottom: 40px;
+  background-color: white;
+  border: 5px solid #00C900;
+  margin-bottom: 50px;
   max-width: 350px;
+  padding: 50px;
   width: 100%;
 }
-/* 
-.CreatePostWrapper {
 
-} */
+.PostCSS p {
+  margin: 0;
+}
+
+.PostContent {
+  font-size: 24px;;
+}

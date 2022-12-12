@@ -8,7 +8,7 @@ function TextPost({
 }){
     return (
         <div className='PostCSS'>
-            <p>Posted by: {" "}
+            <p className='poster'>Posted by: {" "}
                 {userName}
             </p>
             <p className="Feeling">Feeling: {feeling}</p>
