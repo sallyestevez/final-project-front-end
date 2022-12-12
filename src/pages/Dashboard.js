@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import { useNavigate } from 'react-router-dom';
 import TextPost from '../components/Post';
@@ -31,9 +31,10 @@ function Dashboard({
         if(!isLoggedIn && !isLoading) navigate("/login");
     }, [isLoading, isLoggedIn, navigate]);
 
-    // useEffect(() => {
-    //     if(!isLoggedIn && !isLoading) navigate("/login");
-    // }, [isLoading, isLoggedIn, navigate]);
+    useEffect(() => {
+        if(!app) return;
+        queryData(app).then(setPostData);
+    }, [app]);
 
     return (
         <>
@@ -45,13 +46,15 @@ function Dashboard({
             <div className="PageWrapper">
                 <h1>Dashboard</h1>
                 <div className="PostWrapper">
-                    {/* {postData.map((post))} */}
-                    <TextPost 
-                        // content={post.content}
-                        // userId={post.userId}
-                        // userName={post.userName}
-                        
-                    />
+                    { postData.map((post) => (
+                        <TextPost 
+                            content={post.content}
+                            feeling={post.feeling}
+                            userId={post.userId}
+                            userName={post.userName}
+                        />  
+                    ))}
+                    
                 </div>  
             </div>
         </>

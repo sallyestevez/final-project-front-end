@@ -16,6 +16,7 @@ function LoginPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
     const loginUser = useCallback((e) => {
         e.preventDefault();
 
+        // assign email and password to variables from form
         const email = e.currentTarget.email.value;
         const password = e.currentTarget.password.value;
 

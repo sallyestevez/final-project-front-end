@@ -16,12 +16,12 @@ import UserProfilePage from "./pages/UserProfile";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDOkKdMUmJ9BLEJrUdeR0r7YDFrUpLwJQk",
-  authDomain: "final-project-fall-2022.firebaseapp.com",
-  projectId: "final-project-fall-2022",
-  storageBucket: "final-project-fall-2022.appspot.com",
-  messagingSenderId: "689525929500",
-  appId: "1:689525929500:web:5e5b5772937e0c0598d1d9"
+    apiKey: "AIzaSyDOkKdMUmJ9BLEJrUdeR0r7YDFrUpLwJQk",
+    authDomain: "final-project-fall-2022.firebaseapp.com",
+    projectId: "final-project-fall-2022",
+    storageBucket: "final-project-fall-2022.appspot.com",
+    messagingSenderId: "689525929500",
+    appId: "1:689525929500:web:cac62153cab83a8098d1d9"
 };
 
 function App() {
@@ -30,12 +30,11 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userInformation, setUserInformation] = useState({});
 
-
   // ensure app is initialized when ready
   useEffect(() => {
     //Initialize firebase
     const app = initializeApp(firebaseConfig);
-    setAppInitialized(true);
+    setAppInitialized(app);
   }, []);
 
   // check to see if user is logged in
@@ -60,8 +59,6 @@ function App() {
     }
   }, [appInitialized]);
 
-  console.log({ userInformation });
-
   // goes to page based on the file path
   const router = createBrowserRouter([
     // dashboard / home page
@@ -69,9 +66,12 @@ function App() {
       path: "/",
       element: (
         <Dashboard
+          app={appInitialized}
+          isLoading={isLoading}
           isLoggedIn={isLoggedIn}
           setIsLoggedIn={setIsLoggedIn}
           setUserInformation={setUserInformation}
+          userInformation={userInformation}
         />
       ),
     },
@@ -115,9 +115,12 @@ function App() {
       path: "/new-post",
       element: (
         <CreatePost 
+          app={initializeApp}
+          isLoading={isLoading}
           isLoggedIn={isLoggedIn}
           setIsLoggedIn={setIsLoggedIn}
           setUserInformation={setUserInformation}
+          userInformation={userInformation}
         />
       ),
     },    

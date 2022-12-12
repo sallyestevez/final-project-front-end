@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import Header from '../components/Header';
 import { useNavigate } from 'react-router-dom';
 import CreatePostForm from '../components/CreatePostForm';
-import { addDoc, collection, getFirestore } from 'firebase/firestore';
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
 
 function CreatePost({ 
     app, 
@@ -15,26 +15,32 @@ function CreatePost({
     const [postSuccessful, setPostSuccessful] = useState(false);
     const navigate = useNavigate();
 
-    const createPost = useCallback((e) => {
-        e.preventDefault();
-        const db = getFirestore(app);
+    const createPost = useCallback(
+        async (e) => {
+            e.preventDefault();
+            const db = getFirestore(app);
 
-        const content = e.currentTarget.content.value;
-        const userId = userInformation.uid;
-        const userName = userInformation.displayName;
+            const feeling = e.currentTarget.feeling.value;
+            const content = e.currentTarget.content.value;
+            const userId = userInformation.uid;
+            const userName = userInformation.displayName;
 
-        // db.collection("posts")
-        //     .add({
-        //         content,
-        //         userId,
-        //         userName,
-        //     })
+            console.log(feeling, content, userId, userName);
+            try {
+                const docRef = await addDoc(collection(db, "posts"), {
+                    content,
+                    feeling,
+                    userd: userId,
+                    userName,
+                });
+                console.log("Document written with ID: ", docRef.id);
+                setPostSuccessful(true);
+            } catch (e) {
+                // console.error("Error adding document: ", e);
+            }
+    }, [app, userInformation]);
 
-        // try {
-        //     const docRef = await addDoc(collection(db, "posts"))
-        // }
-    });
-
+    console.log(userInformation)
     // if not logged in & not loading navigate to login page
     useEffect(() => {
         if(!isLoggedIn && !isLoading) navigate("/login");
@@ -47,10 +53,11 @@ function CreatePost({
                 setIsLoggedIn={setIsLoggedIn} 
                 setUserInformation={setUserInformation} 
             />
-            <div className="PageWrapper">
+            <div className="PageWrapper CreatePostWrapper">
                 <h1>Make a Post</h1>
-                <div class="PostInput">
-                    <CreatePostForm />
+                <div className="PostInput">
+                    <CreatePostForm createPost={createPost}/>
+                    {postSuccessful && <p>Success!</p>}
                 </div>
             </div>
         </>

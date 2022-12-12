@@ -1,19 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 function TextPost({ 
     content, 
-    postData, 
+    feeling,
     userId, 
     userName 
 }){
     return (
         <div className='PostCSS'>
             <p>Posted by: {" "}
-                <Link to={`user/${userId}`}>{userName}</Link>
+                {userName}
             </p>
+            <p className="Feeling">Feeling: {feeling}</p>
             <p className="PostContent">{content}</p>
-
         </div>
     );
 }
