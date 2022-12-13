@@ -44,7 +44,7 @@ function Dashboard({
                 setUserInformation={setUserInformation}
             />
             <div className="PageWrapper">
-                <h1>Activity Feed</h1>
+                <h1 className='PageTitle'>Activity Feed</h1>
                 <div className="PostWrapper">
                     { postData.map((post) => (
                         <TextPost 

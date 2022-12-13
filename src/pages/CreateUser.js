@@ -74,7 +74,7 @@ function CreateUserPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
                 setUserInformation={setUserInformation} 
             />
             <div className="PageWrapper">
-                <h1 className='loginMessage'>Welcome!</h1>
+                <h1 className='PageTitle'>Welcome!</h1>
                 <CreateUserForm signUpUser={signUpUser}/>
                 <p>{errors}</p>
                 <p>Already have an account?</p>

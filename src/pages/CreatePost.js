@@ -54,7 +54,7 @@ function CreatePost({
                 setUserInformation={setUserInformation} 
             />
             <div className="PageWrapper CreatePostWrapper">
-                <h1>Make a Post</h1>
+                <h1 className="PageTitle">Make a Post</h1>
                 <div className="PostInput">
                     <CreatePostForm createPost={createPost}/>
                     {postSuccessful && <p>Success!</p>}

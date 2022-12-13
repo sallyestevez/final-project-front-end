@@ -54,20 +54,13 @@ nav p:hover {
   padding: 25px;
 }
 
-h1 {
+.PageTitle {
   color: #1D1D1D;
   display: flex;
   font-family: 'Quicksand', sans-serif;
   justify-content: center;
   margin: 0;
   padding-bottom: 25px;
-}
-
-.PageTitle {
-  display: flex;
-  justify-content: space-around;
-  max-width: 750px;
-  width: 100%;
 }
 
 .loginMessage  {
@@ -77,16 +70,24 @@ h1 {
   margin: 0;
 }
 
+.PostInput {
+  display: flex;
+  font-family: 'Varela Round', sans-serif;
+  justify-content: center;
+}
+
 .formElement {
   display: flex;
   flex-direction: column;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
   max-width: 500px;
 }
 
-/* can check + change css based on figma */
 .formElement input {
+  background-color: #D7E4D7;
   border: 1px solid #737373;
-  border-radius: 10px;
+  border-radius: 5px;
   font-size: 20px;
   margin-bottom: 30px;
   padding: 10px;
@@ -97,32 +98,43 @@ h1 {
   margin-bottom: 8px;
 }
 
-textarea {
+.formElement textarea {
+  background-color: #D7E4D7;
   border: 1px solid #737373;
-  border-radius: 10px;
+  border-radius: 5px;
   font-family: 'Varela Round', sans-serif;
 }
 
+.ButtonWrapper {
+  margin-top: 20px;
+}
+
 .Button {
-  background: azure;
-  border: .5px solid #737373;
+  background: #E5E5E5;
+  border: none;
   border-radius: 10px;
+  display: flex;
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
   font-weight: 800;
-  margin-top: 20px;
-  padding: 10px;
+  justify-content: center;
+  padding: 0;
+  width: 100px;
 }
 
-.Button:hover{
-  background-color: #ACDEAC;
+.Button:hover {
+  background: #ACDEAC;
+}
+
+.Button:hover p{
+  color: #00B700;
 }
 
 .PostWrapper{
   display: flex;
+  filter: drop-shadow(20px 10px 5px #00C900);
   flex-wrap: wrap;
   justify-content: center;
-  filter: drop-shadow(30px 10px 4px #00C900);
 }
 
 .PostCSS {
@@ -176,3 +188,20 @@ textarea {
   padding: 5px 10px 10px 10px;
 }
 
+.UserProfile {
+  background-color: white;
+  border: 2.5px solid #00C900;
+  border-radius: 10px;
+  display: flex;
+  filter: drop-shadow(20px 10px 5px #00C900);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 275px;
+  max-width: 500px;
+  width: 50%;
+}
+
+.UserProfile p {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+}

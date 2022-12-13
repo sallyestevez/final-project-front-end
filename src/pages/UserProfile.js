@@ -18,21 +18,24 @@ function UserProfilePage({ isLoading, isLoggedIn, setIsLoggedIn, setUserInformat
                 setUserInformation={setUserInformation}
             />
             <div className="PageWrapper">
-                <h1>User Profile</h1>
-                <div className='PostCSS'>
-                <p>
-                    <strong>Display Name: </strong>
-                    {userInformation.displayName}
-                </p>
-                <p>
-                    <strong>Email: </strong>
-                    {userInformation.email}
-                </p>
-                <p>
-                    <strong>User ID: </strong>
-                    {userInformation.uid}
-                </p>
+                <h1 className='PageTitle'>User Profile</h1>
+                <div class="UserProfile">
+                    <div className=''>
+                    <p>
+                        <strong>Display Name: </strong>
+                        {userInformation.displayName}
+                    </p>
+                    <p>
+                        <strong>Email: </strong>
+                        {userInformation.email}
+                    </p>
+                    <p>
+                        <strong>User ID: </strong>
+                        {userInformation.uid}
+                    </p>
                 </div>
+            </div>
+                
             </div>
         </>
     );

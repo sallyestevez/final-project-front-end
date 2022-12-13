@@ -9,7 +9,7 @@ function CreatePostForm({ createPost }) {
             <textarea name="content" rows="4" cols="50"></textarea>
             <div className="ButtonWrapper">
                 <button type="submit" className="Button">
-                    Post
+                    <p>Post</p>
                 </button>
             </div>
         </form>

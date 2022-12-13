@@ -50,7 +50,7 @@ function LoginPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
             setUserInformation={setUserInformation}
         />
         <div className="PageWrapper">
-            <h1 className='loginMessage'>Welcome back!</h1>
+            <h1 className='PageTitle'>Welcome back!</h1>
             <LoginForm loginUser={loginUser}/>
             <p>{errors}</p>
             <p>Don't have an account?</p>
