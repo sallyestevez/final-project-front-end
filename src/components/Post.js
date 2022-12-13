@@ -1,4 +1,5 @@
 import React from 'react';
+import Counter from './Counter';
 
 function TextPost({ 
     content, 
@@ -8,13 +9,18 @@ function TextPost({
 }){
     return (
         <div className='PostCSS'>
-            <div className='poster'>
+            <div className='PosterFeeling'>
                 <p>Posted by: {" "}
                     {userName}
                 </p>
+                <p>
+                    Feeling: {feeling}
+                </p>
             </div>
-            <p className="Feeling">Feeling: {feeling}</p>
             <p className="PostContent">{content}</p>
+            <div>
+                <Counter />
+            </div>            
         </div>
     );
 }

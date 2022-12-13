@@ -54,7 +54,6 @@ function Dashboard({
                             userName={post.userName}
                         />  
                     ))}
-                    
                 </div>  
             </div>
         </>

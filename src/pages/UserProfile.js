@@ -19,6 +19,7 @@ function UserProfilePage({ isLoading, isLoggedIn, setIsLoggedIn, setUserInformat
             />
             <div className="PageWrapper">
                 <h1>User Profile</h1>
+                <div className='PostCSS'>
                 <p>
                     <strong>Display Name: </strong>
                     {userInformation.displayName}
@@ -31,6 +32,7 @@ function UserProfilePage({ isLoading, isLoggedIn, setIsLoggedIn, setUserInformat
                     <strong>User ID: </strong>
                     {userInformation.uid}
                 </p>
+                </div>
             </div>
         </>
     );
