@@ -10,7 +10,6 @@ function Counter() {
             <p>Yeah!</p>
             <p>{count}</p>
         </button>
-        
     );
 }
 

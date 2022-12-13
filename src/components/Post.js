@@ -18,7 +18,7 @@ function TextPost({
                 </p>
             </div>
             <p className="PostContent">{content}</p>
-            <div>
+            <div className='Count'>
                 <Counter />
             </div>            
         </div>
