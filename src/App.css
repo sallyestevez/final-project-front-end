@@ -104,7 +104,7 @@ nav p:hover {
 }
 
 .formElement input {
-  background-color: #D7E4D7;
+  background-color: #EFFBE7;
   border: 1px solid #737373;
   border-radius: 5px;
   font-size: 20px;
@@ -118,7 +118,7 @@ nav p:hover {
 }
 
 .formElement textarea {
-  background-color: #D7E4D7;
+  background-color: #EFFBE7;
   border: 1px solid #737373;
   border-radius: 5px;
   font-family: 'Varela Round', sans-serif;
@@ -200,7 +200,7 @@ nav p:hover {
 }
 
 .YeahButton:hover {
-  background-color: #ACDEAC;
+  background-color: #EFFBE7;
 }
 
 .YeahButton:hover p{
