@@ -75,10 +75,11 @@ function CreateUserPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
             />
             <div className="PageWrapper">
                 <h1 className='PageTitle'>Welcome!</h1>
-                <CreateUserForm signUpUser={signUpUser}/>
-                <p>{errors}</p>
-                <p>Already have an account?</p>
-                <p><Link to="/login">Login</Link></p>
+                <div class="InputField">
+                    <CreateUserForm signUpUser={signUpUser}/>
+                    <p>{errors}</p>
+                </div>
+                <p className='Account'>Already have an account? <Link to="/login">Login</Link></p>
             </div>
         </>
     );

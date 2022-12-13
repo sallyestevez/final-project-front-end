@@ -13,9 +13,9 @@ function CreateUserForm({ signUpUser }) {
             <label htmlFor="password">Password</label>
             <input type="password" name="password" />
 
-            <div className="ButtonWrapper">
+            <div className="ButtonWrapper CreateLoginButton">
                 <button type="submit" className="Button">
-                    Submit
+                    <p>Create</p>
                 </button>
             </div>
         </form>

@@ -9,9 +9,9 @@ function LoginForm({ loginUser }) {
             <label htmlFor="password">Password</label>
             <input type="password" name="password" />
 
-            <div className="ButtonWrapper">
+            <div className="CreateLoginButton">
                 <button type="submit" className="Button">
-                    Submit
+                    <p>Login</p>
                 </button>
             </div>
         </form>

@@ -70,7 +70,12 @@ nav p:hover {
   margin: 0;
 }
 
-.PostInput {
+.Account {
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+}
+
+.InputField {
   display: flex;
   font-family: 'Varela Round', sans-serif;
   justify-content: center;
@@ -107,6 +112,10 @@ nav p:hover {
 
 .ButtonWrapper {
   margin-top: 20px;
+}
+
+.CreateLoginButton {
+  margin-top: 0px;
 }
 
 .Button {

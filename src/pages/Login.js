@@ -51,10 +51,11 @@ function LoginPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
         />
         <div className="PageWrapper">
             <h1 className='PageTitle'>Welcome back!</h1>
-            <LoginForm loginUser={loginUser}/>
-            <p>{errors}</p>
-            <p>Don't have an account?</p>
-            <p><Link to="/create">Create Account</Link></p>
+            <div class="InputField">
+                <LoginForm loginUser={loginUser}/>
+                <p>{errors}</p>
+            </div>
+            <p className='Account'>Don't have an account? <Link to="/create">Create Account</Link></p>
         </div>
     </>
     );
