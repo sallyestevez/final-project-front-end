@@ -75,10 +75,11 @@ function CreateUserPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
             />
             <div className="PageWrapper">
                 <h1 className='PageTitle'>Welcome!</h1>
+                <h2 className="Subtitle">The original Miiverse died so I'm bringing it back</h2>
                 <div class="InputField">
                     <CreateUserForm signUpUser={signUpUser}/>
-                    <p>{errors}</p>
                 </div>
+                <p className='Account'>{errors}</p>
                 <p className='Account'>Already have an account? <Link to="/login">Login</Link></p>
             </div>
         </>

@@ -53,8 +53,8 @@ function LoginPage({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
             <h1 className='PageTitle'>Welcome back!</h1>
             <div class="InputField">
                 <LoginForm loginUser={loginUser}/>
-                <p>{errors}</p>
             </div>
+            <p className='Account'>{errors}</p>
             <p className='Account'>Don't have an account? <Link to="/create">Create Account</Link></p>
         </div>
     </>

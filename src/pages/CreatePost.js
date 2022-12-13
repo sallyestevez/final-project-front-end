@@ -57,9 +57,9 @@ function CreatePost({
                 <h1 className="PageTitle">Make a Post</h1>
                 <div className="InputField">
                     <CreatePostForm createPost={createPost}/>
-                    {postSuccessful && <p>Success!</p>}
                 </div>
             </div>
+            {postSuccessful && <p class="SuccessConfirm">Posted &#x2713;</p>}
         </>
     );
 }

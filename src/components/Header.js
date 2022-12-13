@@ -17,11 +17,12 @@ function Header({ isLoggedIn, setIsLoggedIn, setUserInformation }) {
 
     return (
         <header>
-                <img 
+                <a href='/'><img 
                     src="https://web.archive.org/web/20171101163714im_/https://d13ph7xrk1ee39.cloudfront.net/img/menu-logo.png?HyDpkTF6yevjYj68w6Gl3g" 
                     alt="Miiverse" 
                     width="165" 
                     height="30"></img>
+                </a>
             <nav>
                 {isLoggedIn && <Link to="/">
                     <p>Activity Feed</p>

@@ -80,6 +80,7 @@ function App() {
       path: "/profile",
       element: (
         <UserProfilePage 
+          app={appInitialized}
           isLoading={isLoading} 
           isLoggedIn={isLoggedIn} 
           userInformation={userInformation} 

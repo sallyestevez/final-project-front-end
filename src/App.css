@@ -63,7 +63,15 @@ nav p:hover {
   padding-bottom: 25px;
 }
 
+.Subtitle {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0 auto;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
 .loginMessage  {
+  font-family: 'Quicksand', sans-serif;
   font-size: 48px;
   font-weight: bolder;
   line-height: 48px;
@@ -71,6 +79,12 @@ nav p:hover {
 }
 
 .Account {
+  font-family: 'Varela Round', sans-serif;
+  padding-top: 5px;
+  text-align: center;
+}
+
+.SuccessConfirm {
   font-family: 'Varela Round', sans-serif;
   text-align: center;
 }
@@ -206,11 +220,14 @@ nav p:hover {
   flex-wrap: wrap;
   justify-content: center;
   margin-left: 275px;
+  margin-bottom: 50px;
   max-width: 500px;
-  width: 50%;
+  width: 100%;
 }
 
 .UserProfile p {
   font-family: 'Quicksand', sans-serif;
   font-weight: 600;
 }
+
+
