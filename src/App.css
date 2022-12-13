@@ -1,15 +1,17 @@
 body {
+  /* code for background based on 
+  https://www.w3resource.com/html-css-exercise/html-css-practical-exercises/html-css-practical-exercise-28.php */
   background-color: #F4F4F4;
-  background-image: radial-gradient(#F9F9F9 15%, transparent 10%),
-    radial-gradient(#F9F9F9 15%, transparent 10%);
+  background-image: radial-gradient(#F9F9F9 20%, transparent 10%),
+    radial-gradient(#F9F9F9 20%, transparent 10%);
   background-size: 10px 10px;
   background-position: 0 0, 15px 15px;
   background-repeat: repeat;
 }
 
 header {
-  background-color: white;
-  border-bottom: 1px solid black;
+  background-color: #fff;
+  border-bottom: 5px solid #E5E5E5;
   display: flex;
   padding: 10px;
 }
@@ -27,7 +29,7 @@ nav {
 }
 
 nav p {
-  color: black;
+  color: #737373;
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
@@ -39,10 +41,20 @@ nav a {
   text-decoration: none;
 }
 
+nav p:hover {
+  color: #00C900;
+}
+
 .PageWrapper {
   margin: 0 auto;
   max-width: 1080px;
   padding: 25px;
+}
+
+h1 {
+  margin: 0;
+  padding-bottom: 25px;
+  color: #1D1D1D;
 }
 
 .loginMessage  {
@@ -87,22 +99,35 @@ nav a {
 .PostWrapper{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  filter: drop-shadow(30px 10px 4px #00C900);
 }
 
 .PostCSS {
   background-color: white;
-  border: 5px solid #00C900;
-  margin-bottom: 50px;
-  max-width: 350px;
-  padding: 50px;
+  border: 2.5px solid #00C900;
+  border-radius: 10px;
+  margin: 0px 50px 50px;
+  max-width: 750px;
   width: 100%;
+}
+
+.poster {
+  border-bottom: 2.5px #ACACAC solid;
+  padding: 5px; 
+  padding-left: 10px;
+  font-weight: 500;
 }
 
 .PostCSS p {
   margin: 0;
 }
 
+.Feeling {
+  padding: 10px 10px 10px 10px;
+}
+
 .PostContent {
-  font-size: 24px;;
+  font-size: 24px;
+  padding: 5px 10px 10px 10px;
 }
