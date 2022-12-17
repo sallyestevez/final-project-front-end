@@ -1,6 +1,7 @@
 import React from "react";
 
 function CreatePostForm({ createPost }) {
+    
     return (
         <form className="formElement" onSubmit={(e) => createPost(e)}>
             <label htmlFor="feeling">How are you feeling right now?</label>

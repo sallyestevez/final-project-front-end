@@ -25,7 +25,6 @@ function CreatePost({
             const userId = userInformation.uid;
             const userName = userInformation.displayName;
 
-            console.log(feeling, content, userId, userName);
             try {
                 const docRef = await addDoc(collection(db, "posts"), {
                     content,
@@ -36,11 +35,10 @@ function CreatePost({
                 console.log("Document written with ID: ", docRef.id);
                 setPostSuccessful(true);
             } catch (e) {
-                // console.error("Error adding document: ", e);
+                console.error("Error adding document: ", e);
             }
     }, [app, userInformation]);
 
-    console.log(userInformation)
     // if not logged in & not loading navigate to login page
     useEffect(() => {
         if(!isLoggedIn && !isLoading) navigate("/login");

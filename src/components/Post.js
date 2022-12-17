@@ -5,7 +5,7 @@ function TextPost({
     content, 
     feeling,
     userId, 
-    userName 
+    userName,
 }){
     return (
         <div className='PostCSS'>
