@@ -1,22 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Varela+Round&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Varela+Round&display=swap");
 
 body {
   /* code for background based on 
   https://www.w3resource.com/html-css-exercise/html-css-practical-exercises/html-css-practical-exercise-28.php */
-  background-color: #F4F4F4;
-  background-image: radial-gradient(#F9F9F9 25%, transparent 10%),
-    radial-gradient(#F9F9F9 25%, transparent 10%);
+  background-color: #f4f4f4;
+  background-image: radial-gradient(#f9f9f9 25%, transparent 10%),
+    radial-gradient(#f9f9f9 25%, transparent 10%);
   background-position: 0 0, 15px 15px;
   background-repeat: repeat;
   background-size: 10px 10px;
-
 }
 
 header {
   background-color: #fff;
-  border-bottom: 5px solid #E5E5E5;
+  border-bottom: 5px solid #e5e5e5;
   display: flex;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   padding: 10px;
 }
 
@@ -46,7 +45,7 @@ nav a {
 }
 
 nav p:hover {
-  color: #00C900;
+  color: #00c900;
 }
 
 .PageWrapper {
@@ -56,23 +55,23 @@ nav p:hover {
 }
 
 .PageTitle {
-  color: #1D1D1D;
+  color: #1d1d1d;
   display: flex;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   justify-content: center;
   margin: 0;
   padding-bottom: 25px;
 }
 
 .Subtitle {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   margin: 0 auto;
   padding-bottom: 25px;
   text-align: center;
 }
 
-.loginMessage  {
-  font-family: 'Quicksand', sans-serif;
+.loginMessage {
+  font-family: "Quicksand", sans-serif;
   font-size: 48px;
   font-weight: bolder;
   line-height: 48px;
@@ -80,32 +79,32 @@ nav p:hover {
 }
 
 .Account {
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
   padding-top: 5px;
   text-align: center;
 }
 
 .SuccessConfirm {
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
   text-align: center;
 }
 
 .InputField {
   display: flex;
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
   justify-content: center;
 }
 
 .formElement {
   display: flex;
   flex-direction: column;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: 700;
   max-width: 500px;
 }
 
 .formElement input {
-  background-color: #EFFBE7;
+  background-color: #effbe7;
   border: 1px solid #737373;
   border-radius: 5px;
   font-size: 20px;
@@ -119,10 +118,10 @@ nav p:hover {
 }
 
 .formElement textarea {
-  background-color: #EFFBE7;
+  background-color: #effbe7;
   border: 1px solid #737373;
   border-radius: 5px;
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
 }
 
 .ButtonWrapper {
@@ -134,11 +133,11 @@ nav p:hover {
 }
 
 .Button {
-  background: #E5E5E5;
+  background: #e5e5e5;
   border: none;
   border-radius: 10px;
   display: flex;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 16px;
   font-weight: 800;
   justify-content: center;
@@ -147,23 +146,23 @@ nav p:hover {
 }
 
 .Button:hover {
-  background: #ACDEAC;
+  background: #acdeac;
 }
 
-.Button:hover p{
-  color: #00B700;
+.Button:hover p {
+  color: #00b700;
 }
 
-.PostWrapper{
+.PostWrapper {
   display: flex;
-  filter: drop-shadow(20px 10px 5px #00C900);
+  filter: drop-shadow(20px 10px 5px #00c900);
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .PostCSS {
   background-color: white;
-  border: 2.5px solid #00C900;
+  border: 2.5px solid #00c900;
   border-radius: 10px;
   margin: 0px 50px 50px;
   max-width: 750px;
@@ -171,11 +170,11 @@ nav p:hover {
 }
 
 .PosterFeeling {
-  border-bottom: 2.5px #ACACAC solid;
-  font-family: 'Quicksand', sans-serif;
+  border-bottom: 2.5px #acacac solid;
+  font-family: "Quicksand", sans-serif;
   font-size: 16px;
   font-weight: 700;
-  padding: 5px; 
+  padding: 5px;
   padding-left: 10px;
 }
 
@@ -186,26 +185,26 @@ nav p:hover {
 
 .PostContent {
   font-size: 28px;
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
   padding: 10px;
 }
 
 .YeahButton {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   border: none;
   border-radius: 5px;
   display: flex;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: 800;
   gap: 5px;
 }
 
 .YeahButton:hover {
-  background-color: #EFFBE7;
+  background-color: #effbe7;
 }
 
-.YeahButton:hover p{
-  color: #00B700;
+.YeahButton:hover p {
+  color: #00b700;
 }
 
 .Count {
@@ -214,10 +213,10 @@ nav p:hover {
 
 .UserProfile {
   background-color: white;
-  border: 2.5px solid #00C900;
+  border: 2.5px solid #00c900;
   border-radius: 10px;
   display: flex;
-  filter: drop-shadow(20px 10px 5px #00C900);
+  filter: drop-shadow(20px 10px 5px #00c900);
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 50px;
@@ -227,8 +226,24 @@ nav p:hover {
 }
 
 .UserProfile p {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: 600;
 }
 
+@media (max-width: 600px) {
+  nav {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+    width: auto;
+  }
 
+  nav p {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 0 0px;
+    text-decoration: none;
+  }
+}
